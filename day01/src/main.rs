@@ -1,6 +1,7 @@
 use itertools::Itertools;
 
 const INPUT: &str = include_str!("../input.txt");
+const TEST_INPUT: &str = include_str!("../test_input.txt");
 
 fn parse_input(input: &str) -> Vec<i32> {
     input
@@ -37,7 +38,6 @@ fn main() {
 mod tests {
     use super::*;
 
-    const TEST_INPUT: &str = include_str!("../test_input.txt");
     #[test]
     fn p1() {
         let input: Vec<_> = parse_input(TEST_INPUT);
