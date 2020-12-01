@@ -1,0 +1,8 @@
+target/
+**/*.rs.bk
+history.txt
+*.swp
+*.swo
+*~
+.idea
+main
