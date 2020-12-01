@@ -13,18 +13,18 @@ fn part1(xs: &Vec<i32>) -> i32 {
     xs.iter()
         .combinations(2)
         .find(|x| x[0] + x[1] == 2020)
-        .unwrap()
-        .iter()
-        .fold(1, |acc, x| acc * **x)
+        .expect("No pair of entries add up to 2020...")
+        .into_iter()
+        .product()
 }
 
 fn part2(xs: &Vec<i32>) -> i32 {
     xs.iter()
         .combinations(3)
         .find(|x| x[0] + x[1] + x[2] == 2020)
-        .unwrap()
-        .iter()
-        .fold(1, |acc, x| acc * **x)
+        .expect("No pair of entries add up to 2020...")
+        .into_iter()
+        .product()
 }
 
 fn main() {
