@@ -1,0 +1,17 @@
+WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
+inner_alpha = @{ ASCII_ALPHA+ }
+inner_digits = @{ ASCII_DIGIT+ }
+inner_hex = @{ ASCII_HEX_DIGIT+ }
+ecl = ${ "ecl:" ~ inner_alpha }
+pid = ${ "pid:" ~ inner_digits }
+eyr = ${ "eyr:" ~ inner_digits }
+hcl = ${ "hcl:" ~ ("#" ~ inner_hex) }
+byr = ${ "byr:" ~ inner_digits }
+iyr = ${ "iyr:" ~ inner_digits }
+cid = ${ "cid:" ~ inner_digits }
+hgtcm = ${ "hgt:" ~ inner_digits ~ "cm" }
+hgtin = ${ "hgt:" ~ inner_digits ~ "in" }
+
+data = { (ecl | pid | eyr | hcl | byr | iyr | cid | hgtcm | hgtin)+ }
+
+input = _{ SOI ~ data ~ EOI }
