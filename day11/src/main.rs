@@ -1,5 +1,4 @@
 use itertools::Itertools;
-use std::collections::HashMap;
 
 const INPUT: &str = include_str!("../input.txt");
 
@@ -34,7 +33,7 @@ mod tests {
     fn p1() {
         let input = parse_input(TEST_INPUT);
         let result = part1(&input);
-        assert_eq!(result, 220);
+        assert_eq!(result, 37);
     }
 
     #[test]
