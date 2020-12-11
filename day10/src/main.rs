@@ -1,6 +1,5 @@
-use std::collections::HashMap;
-
 use itertools::Itertools;
+use std::collections::HashMap;
 
 const INPUT: &str = include_str!("../input.txt");
 
