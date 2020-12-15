@@ -81,6 +81,7 @@ dependencies = [
  "num-complex",
  "rayon",
  "reformation",
+ "regex",
  "serde_scan",
 ]
 
